@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Adventure Quest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="app">
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen active">
+            <div class="container">
+                <div class="banner">
+                    <h1>✨ MATH ADVENTURE QUEST ✨</h1>
+                    <p>🧮 Solve math problems and defeat monsters! 🧮</p>
+                </div>
+                <button onclick="startGame()" class="btn-large">START GAME</button>
+            </div>
+        </div>
+
+        <!-- Class Selection Screen -->
+        <div id="classScreen" class="screen">
+            <div class="container">
+                <h1>⚔️ CHOOSE YOUR CLASS ⚔️</h1>
+                <div class="class-options">
+                    <div class="class-card" onclick="selectClass('Explorer')">
+                        <div class="emoji">🗺️</div>
+                        <h3>EXPLORER</h3>
+                        <p>Agile and quick. Bonus movement speed!</p>
+                    </div>
+                    <div class="class-card" onclick="selectClass('Scholar')">
+                        <div class="emoji">📚</div>
+                        <h3>SCHOLAR</h3>
+                        <p>Wise and knowledgeable. Bonus accuracy!</p>
+                    </div>
+                    <div class="class-card" onclick="selectClass('Strategist')">
+                        <div class="emoji">🧠</div>
+                        <h3>STRATEGIST</h3>
+                        <p>Clever and tactical. Better problem-solving!</p>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="playerName" placeholder="Enter your character's name">
+                    <button onclick="startAdventure()" class="btn-large">BEGIN ADVENTURE</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Game Screen -->
+        <div id="gameScreen" class="screen">
+            <div class="container">
+                <div class="header">
+                    <h2>🌟 <span id="playerInfo"></span> 🌟</h2>
+                </div>
+                
+                <div class="regions-grid" id="regionsGrid"></div>
+
+                <div id="interactionPanel" class="interaction-panel hidden">
+                    <div class="panel-content">
+                        <h3 id="interactionTitle"></h3>
+                        <p id="interactionText"></p>
+                        <div id="problemDisplay"></div>
+                        <input type="text" id="answerInput" placeholder="Your answer" onkeypress="if(event.key==='Enter') submitAnswer()">
+                        <button onclick="submitAnswer()" class="btn">Submit Answer</button>
+                        <button onclick="closeInteraction()" class="btn-secondary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bonus Screen -->
+        <div id="bonusScreen" class="screen">
+            <div class="container">
+                <div class="banner">
+                    <h1>⭐ ULTIMATE BONUS CHALLENGE ⭐</h1>
+                    <p>You have unlocked all regions! Face the final test...</p>
+                </div>
+                <div id="bonusContent"></div>
+                <button onclick="skipBonus()" class="btn-secondary">Skip</button>
+            </div>
+        </div>
+
+        <!-- Finished Screen -->
+        <div id="finishedScreen" class="screen">
+            <div class="container">
+                <div class="banner">
+                    <h1 id="finishTitle"></h1>
+                    <p id="finishMessage"></p>
+                </div>
+                <button onclick="location.reload()" class="btn-large">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>

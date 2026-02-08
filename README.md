@@ -79,24 +79,6 @@ math-adventure/
 └── requirements.txt     # Python dependencies
 ```
 
-## 🌐 Deployment
-
-### Deploy to Heroku
-
-```bash
-heroku login
-heroku create your-app-name
-git push heroku main
-heroku open
-```
-
-### Deploy to Render.com
-
-1. Push to GitHub
-2. Go to [render.com](https://render.com)
-3. Create new Web Service
-4. Connect your GitHub repository
-5. Deploy!
 
 ## 🎮 Terminal Version
 
@@ -116,7 +98,7 @@ MIT License
 
 ## 🤝 Contributing
 
-Feel free to fork and submit pull requests!
+Feel free to fork and submit pull requests! All gratitude goes into myself, and 2 of my friends
 
 ---
 

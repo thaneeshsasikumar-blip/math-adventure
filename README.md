@@ -6,7 +6,7 @@ A fun interactive math game built with Python Flask and web technologies!
 
 If you're running the game locally, open the game in your browser here after starting the server:
 
-**[Open at mathadventure.com](http://localhost:5000)** (start the server first)
+**[Open at localhost:5000](http://localhost:5000)** (start the server first)
 
 ## 🎯 Features
 

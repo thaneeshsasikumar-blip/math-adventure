@@ -2,9 +2,11 @@
 
 A fun interactive math game built with Python Flask and web technologies!
 
-## 🚀 Play Online
+## 🚀 Play (Local)
 
-**[Click here to play the game](https://your-deployed-link.com)** (Deploy to Heroku/Render first)
+If you're running the game locally, open the game in your browser here after starting the server:
+
+**[Open at mathadventure.com](http://localhost:5000)** (start the server first)
 
 ## 🎯 Features
 
